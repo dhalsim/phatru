@@ -47,6 +47,21 @@ class Relay implements MessageComponentInterface
     }
 
     /**
+     * Configure error reporting based on server configuration
+     */
+    public function configureErrorReporting(array $config): void
+    {
+        if (isset($config['server']['error_reporting'])) {
+            $errorConfig = $config['server']['error_reporting'];
+            if ($errorConfig['suppress_deprecations']) {
+                error_reporting($errorConfig['level']);
+            } else {
+                error_reporting(E_ALL);
+            }
+        }
+    }
+
+    /**
      * Add a general event rejection handler
      */
     public function addRejectEventHandler(callable $handler): void

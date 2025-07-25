@@ -800,6 +800,9 @@ if (php_sapi_name() === 'cli') {
     // Create NIP-29 relay instance
     $relay = new NIP29Relay($pdo, 'your-relay-private-key-here');
     
+    // Configure error reporting based on config
+    $relay->configureErrorReporting($config);
+    
     // Set up relay info
     $relay->setInfo([
         'name' => 'NIP-29 Groups Relay',

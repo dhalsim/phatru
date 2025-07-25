@@ -22,6 +22,10 @@
         'port' => 8090,
         'ssl' => false,
         'ssl_options' => [],
+        'error_reporting' => [
+            'suppress_deprecations' => true, // Set to false to show deprecation warnings from Ratchet
+            'level' => E_ALL & ~E_DEPRECATED & ~E_USER_DEPRECATED, // Error level when deprecations are suppressed
+        ],
     ],
 
     // Relay information (NIP-11)

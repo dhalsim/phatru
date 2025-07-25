@@ -6,11 +6,14 @@ use Phatru\Relay;
 use Phatru\MySQLStore;
 use Phatru\Policies;
 
+// Load configuration
+$config = require __DIR__ . '/config.php';
+
 // Create the relay instance
 $relay = new Relay();
 
-// Load configuration
-$config = require __DIR__ . '/config.php';
+// Configure error reporting based on config
+$relay->configureErrorReporting($config);
 
 // Set up MySQL connection
 $pdo = new PDO(
