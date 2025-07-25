@@ -2,9 +2,9 @@
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-use Khatru\Relay;
-use Khatru\MySQLStore;
-use Khatru\Policies;
+use Phatru\Relay;
+use Phatru\MySQLStore;
+use Phatru\Policies;
 
 // Create the relay instance
 $relay = new Relay();

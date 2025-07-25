@@ -1,6 +1,6 @@
 <?php
 
-namespace Khatru;
+namespace Phatru;
 
 use Ratchet\ConnectionInterface;
 

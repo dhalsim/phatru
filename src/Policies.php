@@ -1,6 +1,6 @@
 <?php
 
-namespace Khatru;
+namespace Phatru;
 
 class Policies
 {
@@ -155,15 +155,21 @@ class Policies
     }
 
     /**
-     * Validate event signature (basic check)
+     * Validate event signature using Schnorr signature verification
      */
     public static function validateSignature(): callable
     {
         return function (Context $ctx, Event $event): array {
-            // Basic validation - in a real implementation, you'd verify the signature
+            // Basic format validation
             if (empty($event->sig) || strlen($event->sig) !== 128) {
+                return [true, "Invalid signature format"];
+            }
+            
+            // Verify the Schnorr signature
+            if (!$event->verifySignature()) {
                 return [true, "Invalid signature"];
             }
+            
             return [false, ''];
         };
     }
