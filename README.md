@@ -1,6 +1,6 @@
-# Khatru PHP Relay
+# Phatru PHP Relay
 
-A PHP backend library that models **Khatru's architecture**—with modular, callback-driven event pipelines—for building custom Nostr relays.
+A PHP backend library that models **[Khatru](https://github.com/fiatjaf/khatru)'s architecture**—with modular, callback-driven event pipelines—for building custom Nostr relays.
 
 ## Features
 
