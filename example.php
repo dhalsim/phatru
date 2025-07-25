@@ -93,9 +93,9 @@ $relay->addRejectFilterHandler(function ($context, $filters) {
     return [false, ''];
 });
 
-echo "Starting Khatru PHP Relay...\n";
+echo "Starting Phatru PHP Relay...\n";
 echo "MySQL connection: OK\n";
 echo "Policies loaded: " . count($relay->onRejectEvent) . " general\n";
 
 // Run the relay
-$relay->run('0.0.0.0', 8080); 
+$relay->run($config['server']['host'], $config['server']['port']); 
