@@ -39,9 +39,9 @@ php setup-database.php
 
 require_once 'vendor/autoload.php';
 
-use Khatru\Relay;
-use Khatru\MySQLStore;
-use Khatru\Policies;
+use Phatru\Relay;
+use Phatru\MySQLStore;
+use Phatru\Policies;
 use PDO;
 
 // Create relay instance
