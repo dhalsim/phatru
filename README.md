@@ -457,9 +457,3 @@ php check-requirements.php
 ```
 
 This will verify your environment and provide specific guidance for any issues.
-
-## Support
-
-- Documentation: [khatru.nostr.technology](https://khatru.nostr.technology)
-- Issues: [GitHub Issues](https://github.com/fiatjaf/khatru/issues)
-- Community: [Nostr Community](https://github.com/nostr-protocol/nostr) 
